@@ -1,0 +1,73 @@
+# Plugin by Matt (Vix) (Drink)
+# Version: 1.1.0
+# MySQL settings
+# true = activate mysql || false = dont activate mysql
+# in your database create table with name "stats", and need put colums:
+# Name colum | Type colum
+# PlayerName >  varchar 
+# kills      >   int 
+# deaths     >   int
+MySQL-Activate: false
+host: localhost
+port: 3306
+db: example
+user: root
+password: yourpassword
+# NoPermissions message
+NoPermissions: '&8[&bNeme&8] &fYou need to be an administrator to run this command.'
+# Warning
+# Note: sql-stats is "true" you need use MySQL-Activate is "true", and displays statistics mysql not to PlayerStats.yml
+# Note: sql-stats is "false" you need use MySQL-Activate is "false", and displays statistics PlayerStats.yml not to mysql
+sql-stats: false
+# Stats command messages
+# Variables
+# %name% %kills% %deaths% %kdr%
+stats-console-msg:
+- '&e&m--------------------------------------'
+- '&bPlayer Stats: &e%name%'
+- '&f'
+- '&6Kills: &e%kills%'
+- '&4Deaths: &c%deaths%'
+- '&3KDR: &b%kdr%'
+- '&e&m--------------------------------------'
+your-stats-msg:
+- '&e&m--------------------------------------'
+- '&bYour stats %name%'
+- '&f'
+- '&6Kills: &e%kills%'
+- '&4Deaths: &c%deaths%'
+- '&3KDR: &b%kdr%'
+- '&e&m--------------------------------------'
+other-stats-msg:
+- '&e&m--------------------------------------'
+- '&bPlayer Stats: &e%name%'
+- '&f'
+- '&6Kills: &e%kills%'
+- '&4Deaths: &c%deaths%'
+- '&3KDR: &b%kdr%'
+- '&e&m--------------------------------------'
+# Monet setup (Vault depend)
+# This is a pay-per-kill structure, so if you want it so that (Vault Required) players get x amount of money upon killing someone, then enable this to true
+Money:
+    Activate: false
+    MoneyPerKill: 200
+    Messages: true
+    MsgKilled: '&eYou kill to &b%death%, &breward: &a%money%'
+    MsgDeath: '&cYou death by &e%killed%'
+# Scoreboard settings
+JoinSetBoard: true
+ScoreStats:
+####                   Variables               ###
+# %playername%, %kills%, %deaths%, %kdr% and <v> #
+    Title: '&6&l%playername%'
+    1: '&b&lEstadisticas'
+    2: '&1<v><v><v><v><v><v>'
+    3: '&6&lKills:'
+    4: '&e&l%kills%'
+    5: '&2<v><v><v><v><v><v>'
+    6: '&4&lDeaths:'
+    7: '&c&l%deaths%'
+    8: '&b<v><v><v><v><v><v>'
+    9: '&9&lKDR:'
+    10: '&b&l%kdr%'
+    11: '&6<v><v><v><v><v><v>'
